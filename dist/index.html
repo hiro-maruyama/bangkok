@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--    <link href="./bangkok/style.css" rel="stylesheet" />  -->
+<!--        <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.0.1/dist/maplibre-gl.css' />      
+        <script src='https://unpkg.com/maplibre-gl@5.0.1/dist/maplibre-gl.js'></script> -->
+        <title>テスト バンコク人口‐駅</title>
+      <script type="module" crossorigin src="./assets/index.287428d6.js"></script>
+      <link rel="stylesheet" href="./assets/index.fe227fe9.css">
+    </head>
+
+<!--    <body style="margin:0">
+        <div id="map" style="height: 100vh"></div>
+        <script type="module" src="/bangkok/bangkok-2.js"></script>
+    </body>  -->
+    <body>
+        <style>
+        .map-overlay {
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            position: absolute;
+            width: 200px;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: aliceblue;
+        }
+
+        .map-overlay fieldset {
+            border: none;
+            padding: 0;
+            margin: 0 0 10px;
+        }
+
+        .map-overlay button {
+        background-color: cornflowerblue;
+        color: white;
+        border-radius: 5px;
+        display: inline-block;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+        }
+
+        .map-overlay button:hover {
+        background-color: blue;
+        box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
+        -webkit-transition: background-color 500ms linear;
+        -ms-transition: background-color 500ms linear;
+        transition: background-color 500ms linear;
+        }  
+
+        .map-overlay box {
+        border: blue;
+        padding: 0;
+        margin: 0 0 10px;
+        }
+ 
+        </style>
+
+        <div id="map" style="height: 100vh"></div>>
+            <div class="map-overlay top"> 
+              <fieldset>
+                <label for="layer" >Layer</label><br />
+                <input type="checkbox" id="osm-layer" name="osm-layer" checked />
+                  <label for="osm-layer">OpenStreetMap</label><br />
+                <input type="checkbox" id="pop-station-Layer" name="pop-station-Layer" checked  />
+                  <label for="pop-station-Layer">population density & distance to station</label><br />
+                <input type="checkbox" id="railway-Layer" name="railway-Layer" checked />
+                  <label for="railwai-Layer">Railway</label><br />
+                <input type="checkbox" id="station-Layer" name="station-Layer" checked  />
+                  <label for="station-Layer">Railway station</label>
+              </fieldset>
+              <fieldset>
+                <label for="thresh">Threshold</label><br />
+                <input type="number" id="thr-number" name="thr-number" value="1000" />
+              </fieldset>
+              <button type="button" id="calculation" name="thresh-cal">access calculation</button>
+              <fieldset>
+                <label for="result">*** Result *** <br> total population</label><br />
+                <input id="tot-pop" class="box" type="number"  />
+                <label for="result2">population within access distance threshold</label><br />
+                <input id="acc-pop" class="box" type="number" readonly="" /> <br /> 
+                <label for="result3">% of population within access distance threshold</label><br />
+                <input id="per-pop" class="box" type="number" readonly="" />                                             
+              </fieldset>
+        </div>  
+       
+    </body> 
+</html>
